@@ -1,16 +1,18 @@
-//right angle triangle star pattern
+//need to print left angle triangle star pattern
 let rows: number = 5;
 
-for (let i = 1; i <= rows; i++) {
+//outer loop controls  the number of rows
+for(let i:number =1;i<=rows;i++ ){
+    //intial empty line
+    let line:string ="";
 
-    let pattern: string = "";
-
-    for (let j = 1; j <= i; j++) {
-
-        pattern += "*";
-
+    //inner loop to print spaces before stars in each row
+    for(let j:number = i;j<rows;j++){
+        line+=" ";
     }
-
-    console.log(pattern);
-
+    //inner loop to print the stars
+    for(let j:number=1;j<=i;j++){
+        line +="*";
+    }
+    console.log(line);
 }
